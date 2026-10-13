@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<title>JSArmor — JavaScript Protector | ronjumodz</title>
+<style>
+:root{--bg:#090e1b;--panel:#111a2c;--panel2:#0d1525;--line:#26334d;--text:#eaf0ff;--muted:#9aa9c7;--blue:#7c8cff;--cyan:#57e1dc;--green:#6ee7b7;--red:#ff9ca8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#1a2851 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #ffffff12}.brand{display:flex;gap:10px;align-items:center;font-size:20px;font-weight:850;letter-spacing:-.5px}.logo{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#07111c;font-weight:900}.navlinks{display:flex;gap:20px;color:var(--muted)}a{color:inherit;text-decoration:none}.hero{padding:58px 0 35px;display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:center}.eyebrow{color:var(--cyan);font-weight:750;text-transform:uppercase;letter-spacing:1.8px;font-size:12px}.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.04;letter-spacing:-2.8px;margin:14px 0 18px}.grad{background:linear-gradient(90deg,#a6b1ff,#61e6de);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:17px;max-width:620px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:1px solid var(--line);background:#18243a;color:var(--text);padding:11px 16px;border-radius:10px;font-weight:700}.btn.primary{background:linear-gradient(110deg,#7888ff,#5bded8);color:#07111c;border:0}.btn:disabled{opacity:.5;cursor:not-allowed}.preview{border:1px solid #ffffff1c;background:linear-gradient(145deg,#151f37,#0c1425);border-radius:18px;padding:18px;box-shadow:0 24px 70px #0005}.windowbar{display:flex;gap:6px;padding-bottom:14px;border-bottom:1px solid #ffffff12}.dot{width:8px;height:8px;border-radius:50%;background:#ff6d7a}.dot:nth-child(2){background:#ffd166}.dot:nth-child(3){background:#6ee7b7}.codefake{font:12px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;color:#9fb4d8;padding:15px 2px}.codefake .purple{color:#c4a7ff}.codefake .cyan{color:#7ce9e0}.sectionhead{margin:38px 0 18px}.sectionhead h2{font-size:27px;letter-spacing:-.8px;margin:0 0 6px}.sectionhead p{color:var(--muted);margin:0}.tool{display:grid;grid-template-columns:1fr 1fr;gap:14px}.pane,.card{border:1px solid var(--line);border-radius:15px;background:linear-gradient(160deg,#121d31,#0d1525);padding:17px;min-width:0}.panehead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}.panehead h3{margin:0;font-size:16px}.tag{font-size:11px;color:var(--cyan);border:1px solid #2d666c;padding:4px 8px;border-radius:20px}.editor{width:100%;min-height:310px;resize:vertical;background:#080e19;border:1px solid #263650;border-radius:10px;padding:13px;color:#dce8ff;font:13px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;outline:none}.editor:focus,input:focus{border-color:var(--blue)}.controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.field input{width:100%;background:#080e19;color:var(--text);border:1px solid #263650;border-radius:9px;padding:10px}.checkrow{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:13px;margin-top:12px}.checkrow input{accent-color:var(--blue)}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.status{padding:10px 12px;border-radius:9px;background:#111e32;color:var(--muted);margin-top:13px;font-size:13px;overflow-wrap:anywhere}.status.ok{color:var(--green);background:#0e2a27}.status.err{color:var(--red);background:#351821}.outputtools{display:flex;gap:7px;flex-wrap:wrap}.small{font-size:12px;color:var(--muted)}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card h3{margin:10px 0 5px}.card p{color:var(--muted);margin:0;font-size:14px}.icon{font-size:22px}.how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stepnum{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;background:#29365c;color:#c5ceff;font-weight:800}.notice{border:1px solid #62552c;background:#282313;color:#f4df9d;border-radius:12px;padding:14px;margin-top:16px;font-size:13px}.faq{border-top:1px solid var(--line);padding:15px 0}.faq b{display:block;margin-bottom:4px}.faq p{margin:0;color:var(--muted)}footer{border-top:1px solid #ffffff12;margin-top:45px;padding:25px 0 35px;color:var(--muted);font-size:13px}.footrow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:38px}.preview{display:none}.tool{grid-template-columns:1fr}.features,.how{grid-template-columns:1fr}.editor{min-height:240px}.navlinks{gap:12px;font-size:13px}.hero h1{letter-spacing:-1.5px}}@media(max-width:480px){.wrap{width:calc(100% - 22px)}.navlinks a:nth-child(2){display:none}.controls{grid-template-columns:1fr}.pane{padding:12px}.hero h1{font-size:40px}}
+
+.credit-pill{font-size:12px;color:#bfcaff;border:1px solid #35446a;border-radius:999px;padding:7px 10px;white-space:nowrap}
+.join-overlay{position:fixed;inset:0;z-index:9999;background:#020611cc;backdrop-filter:blur(7px);display:none;align-items:center;justify-content:center;padding:18px}
+.join-modal{width:min(440px,100%);border:1px solid #35446a;border-radius:20px;padding:24px;background:linear-gradient(145deg,#17233d,#0b1221);box-shadow:0 25px 90px #0009;text-align:center}
+.join-mark{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#7c8cff,#57e1dc);display:grid;place-items:center;color:#07111c;font-size:26px;font-weight:900;margin:0 auto 14px}
+.join-modal h2{margin:0 0 8px;font-size:25px}.join-modal p{color:var(--muted);margin:0 0 18px}.join-actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}.join-close{background:transparent;border:1px solid var(--line);color:var(--text);padding:11px 16px;border-radius:10px;font-weight:700}
+@media(max-width:480px){.credit-pill{display:none}.join-modal{padding:20px}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+ <a class="brand" href="#"><span class="logo">JA</span><span>JSArmor</span></a>
+ <nav class="navlinks"><a href="#protector">Protector</a><a href="#features">Features</a><a href="#guide">How it works</a></nav>
+ <span class="credit-pill">Owner: ronjumodz</span><a class="btn" href="#protector">Open tool ↗</a>
+</header>
+
+<div class="join-overlay" id="joinOverlay" role="dialog" aria-modal="true" aria-labelledby="joinTitle">
+ <div class="join-modal">
+  <div class="join-mark">➤</div>
+  <h2 id="joinTitle">Join our Telegram channel</h2>
+  <p>Join the channel for updates, new tools, and announcements from ronjumodz.</p>
+  <div class="join-actions">
+   <a class="btn primary" id="joinTelegram" href="https://t.me/YourChannel" target="_blank" rel="noopener noreferrer">Join Telegram ↗</a>
+   <button class="join-close" id="closeJoin" type="button">Maybe later</button>
+  </div>
+  <p class="small" style="margin:14px 0 0">Owner: ronjumodz</p>
+ </div>
+</div>
+<main class="wrap">
+<section class="hero">
+ <div><div class="eyebrow">JavaScript protection toolkit</div><h1>Protect your code.<br><span class="grad">Keep building.</span></h1><p>Obfuscate JavaScript in your browser with the uploaded JSArmor library. Add an optional domain lock for browser-side execution restrictions.</p><div class="actions"><a class="btn primary" href="#protector">Start protecting →</a><a class="btn" href="#guide">Read quick guide</a></div><p class="small">Client-side tool · CDN library required · No upload to a custom server</p></div>
+ <div class="preview"><div class="windowbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="codefake"><span class="purple">function</span> <span class="cyan">secureApp</span>() {<br>&nbsp;&nbsp;<span class="purple">const</span> access = <span class="cyan">validateLicense</span>();<br>&nbsp;&nbsp;<span class="purple">return</span> access ? <span class="cyan">runApp</span>() : <span class="purple">null</span>;<br>}<br><br><span style="color:#6ee7b7">// protection workflow ready</span><br><span class="purple">await</span> JSProtector.protect(source);</div></div>
+</section>
+<section id="protector">
+ <div class="sectionhead"><h2>JavaScript Protector</h2><p>Paste code, optionally lock it to one or more domains, then protect and copy or download the result.</p></div>
+ <div class="tool">
+  <div class="pane"><div class="panehead"><h3>Source code</h3><span class="tag">INPUT</span></div>
+   <textarea id="source" class="editor" spellcheck="false" placeholder="// Paste your JavaScript here&#10;function greet(name) {&#10;  console.log('Hello, ' + name);&#10;}"></textarea>
+   <div class="controls"><div class="field"><label for="file">Or load a .js file</label><input id="file" type="file" accept=".js,text/javascript,application/javascript"></div><div class="field"><label for="domains">Allowed domain(s), optional</label><input id="domains" placeholder="example.com, app.example.com"></div></div>
+   <label class="checkrow"><input id="lock" type="checkbox"> Enable domain lock (blocks execution on other domains)</label>
+   <div class="toolbar"><button class="btn primary" id="protect">🛡 Protect JavaScript</button><button class="btn" id="clear">Clear</button></div>
+   <div id="status" class="status">Ready. The obfuscator library loads from jsDelivr when needed.</div>
+  </div>
+  <div class="pane"><div class="panehead"><h3>Protected output</h3><span class="tag">OUTPUT</span></div>
+   <textarea id="output" class="editor" spellcheck="false" readonly placeholder="// Protected code will appear here"></textarea>
+   <div class="toolbar outputtools"><button class="btn primary" id="copy">Copy output</button><button class="btn" id="download">Download ronjumodz.js</button><button class="btn" id="sample">Load sample</button></div>
+   <p class="small" id="stats">No output generated yet.</p>
+  </div>
+ </div>
+ <div class="notice"><b>Security note:</b> Obfuscation makes code harder to read but does not make client-side secrets safe. Never embed API keys, passwords, private tokens, or authorization logic in browser JavaScript. Domain lock can be bypassed by a determined user; enforce access controls server-side.</div>
+</section>
+<section id="features">
+ <div class="sectionhead"><h2>Built for a practical workflow</h2><p>Features based on the uploaded JSArmor.js and README.</p></div>
+ <div class="features">
+  <article class="card"><div class="icon">🔐</div><h3>JavaScript obfuscation</h3><p>Uses the bundled JSArmor wrapper to apply its size-based obfuscation profiles.</p></article>
+  <article class="card"><div class="icon">🌐</div><h3>Optional domain lock</h3><p>Restricts execution to the domain or domains you enter. Supports the library's normalized domain formats.</p></article>
+  <article class="card"><div class="icon">📱</div><h3>Mobile-friendly</h3><p>Responsive panels and touch-friendly controls for desktop, tablet, and Android browsers.</p></article>
+  <article class="card"><div class="icon">📄</div><h3>File workflow</h3><p>Load a local JavaScript file, protect it, copy the output, or download a protected .js file.</p></article>
+  <article class="card"><div class="icon">⚡</div><h3>Runs in browser</h3><p>Your pasted source is passed to the browser-side library; this page does not upload it to a custom backend.</p></article>
+  <article class="card"><div class="icon">🧭</div><h3>Clear status and errors</h3><p>Progress, library-load failures, validation errors, and output size are shown in the UI.</p></article>
+ </div>
+</section>
+<section id="guide">
+ <div class="sectionhead"><h2>How it works</h2><p>Three quick steps to protect your code.</p></div>
+ <div class="how">
+  <article class="card"><div class="stepnum">1</div><h3>Add your source</h3><p>Paste JavaScript or select a local .js file. The library supports source up to about 2.1 MB.</p></article>
+  <article class="card"><div class="stepnum">2</div><h3>Choose domain lock</h3><p>Leave it unchecked for regular obfuscation, or enter one or more domains and enable the lock.</p></article>
+  <article class="card"><div class="stepnum">3</div><h3>Protect and export</h3><p>Press Protect JavaScript, review the generated output, then copy or download it.</p></article>
+ </div>
+ <div class="sectionhead"><h2>FAQ</h2></div>
+ <div class="faq"><b>Does this website need hosting?</b><p>No. Save index.html and assets/JSArmor.js together and open index.html. An internet connection is needed to load the obfuscator dependency from jsDelivr.</p></div>
+ <div class="faq"><b>Does domain lock guarantee my code cannot be copied?</b><p>No. It is a client-side restriction, not a security boundary. Treat all browser-delivered code as inspectable.</p></div>
+ <div class="faq"><b>Why can obfuscation fail to load?</b><p>The uploaded library dynamically loads JavaScriptObfuscator from jsDelivr. Check internet access, CDN availability, and browser console errors.</p></div>
+</section>
+</main>
+<footer><div class="wrap footrow"><span>© JSArmor · Browser-based JavaScript protection interface</span><span>Keep secrets on the server, not in client-side code.</span></div></footer>
+<script src="assets/JSArmor.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const status=(msg,type='')=>{$('status').textContent=msg;$('status').className='status '+type;};
+$('file').addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;if(f.size>2.1*1024*1024){status('File exceeds the JSArmor library limit of 2.1 MB.','err');e.target.value='';return;}try{$('source').value=await f.text();status('Loaded '+f.name+' ('+f.size.toLocaleString()+' bytes).','ok');}catch(err){status('Could not read file: '+err.message,'err');}});
+$('protect').addEventListener('click',async()=>{const src=$('source').value;if(!src.trim()){status('Paste JavaScript or load a .js file first.','err');return;}if(new Blob([src]).size>2.1*1024*1024){status('Source exceeds the JSArmor library limit of 2.1 MB.','err');return;}const useLock=$('lock').checked;const domains=$('domains').value.split(',').map(x=>x.trim()).filter(Boolean);if(useLock&&!domains.length){status('Enter at least one allowed domain or turn off domain lock.','err');return;}const btn=$('protect');btn.disabled=true;btn.textContent='Protecting…';status('Loading obfuscator and processing source…');try{if(typeof window.JSProtector==='undefined')throw new Error('JSArmor.js did not load. Check that assets/JSArmor.js exists beside this page.');const options=useLock?{lockToDomain:domains.length===1?domains[0]:domains}:{};const result=await window.JSProtector.protect(src,options);$('output').value=result;$('stats').textContent='Input: '+new Blob([src]).size.toLocaleString()+' bytes · Output: '+new Blob([result]).size.toLocaleString()+' bytes';status('Protection complete. Review and export the generated output.','ok');}catch(e){status('Protection failed: '+(e?.message||String(e)),'err');}finally{btn.disabled=false;btn.textContent='🛡 Protect JavaScript';}});
+$('clear').onclick=()=>{$('source').value='';$('output').value='';$('file').value='';$('stats').textContent='No output generated yet.';status('Cleared.');};
+$('copy').onclick=async()=>{if(!$('output').value){status('No output to copy yet.','err');return;}try{await navigator.clipboard.writeText($('output').value);status('Protected code copied to clipboard.','ok');}catch(e){$('output').focus();$('output').select();status('Clipboard access unavailable; output selected. Use Copy from your browser menu.','err');}};
+$('download').onclick=()=>{const code=$('output').value;if(!code){status('No output to download yet.','err');return;}const blob=new Blob([code],{type:'text/javascript;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='protected.js';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);status('Download started.','ok');};
+$('sample').onclick=()=>{$('source').value=`function greet(name) {\n  const message = 'Hello, ' + name + '!';\n  console.log(message);\n  return message;\n}\ngreet('World');`;$('domains').value='';$('lock').checked=false;status('Sample code loaded.','ok');};
+$('lock').addEventListener('change',()=>{$('domains').disabled=!$('lock').checked;$('domains').style.opacity=$('lock').checked?'1':'.6';});$('domains').disabled=true;$('domains').style.opacity='.6';
+</script>
+
+<script>
+/* Site settings: replace this with your real Telegram channel URL. */
+const ronjumodz_TELEGRAM_URL = "https://t.me/ronjumodz";
+const joinLink = document.getElementById("joinTelegram");
+if (joinLink) joinLink.href = ronjumodz_TELEGRAM_URL;
+
+const joinOverlay = document.getElementById("joinOverlay");
+const closeJoin = document.getElementById("closeJoin");
+function closeTelegramPopup(){ if(joinOverlay) joinOverlay.style.display = "none"; }
+if (joinOverlay) {
+  // Show on each fresh site visit; no cookies or tracking are used.
+  window.addEventListener("load", () => { joinOverlay.style.display = "flex"; });
+  joinOverlay.addEventListener("click", (event) => {
+    if (event.target === joinOverlay) closeTelegramPopup();
+  });
+}
+if (closeJoin) closeJoin.addEventListener("click", closeTelegramPopup);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeTelegramPopup();
+});
+</script>
+
+</body></html>
